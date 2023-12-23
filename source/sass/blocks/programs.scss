@@ -1,20 +1,24 @@
-.programs__wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
-.programs__list {
+.program__list {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.programs__list-item {
+.program__list-item {
   position: relative;
   padding: 21px;
-  margin-top: 22px;
+  margin-top: 20px;
   background-color: $smokywhite;
-  width: 100%;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .program__picture {
@@ -30,7 +34,7 @@
   height: 50px;
 }
 
-.program-item__title {
+.program__item__title {
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
@@ -40,7 +44,7 @@
   margin-bottom: 12px;
 }
 
-.program-item__intro {
+.program__item__intro {
   font-family: $fontLato;
   color: $grey;
   width: 100%;
@@ -48,9 +52,12 @@
   margin-top: 17px;
   margin-bottom: 0;
   border-bottom: 1px solid $lightgrey;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
-.program-item__link {
+.program__item__link {
   position: relative;
   align-items: center;
   display: flex;
@@ -62,18 +69,19 @@
 
 .program__link-title {
   z-index: 1;
-  font-size: 16px;
-  line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
   color: $black;
   width: auto;
-  padding-right: 10px;
+  padding-right: 15px;
   margin: 0;
   background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
 }
 
-.program-icon {
+.program__icon {
   position: absolute;
   overflow: hidden;
 }
@@ -88,108 +96,143 @@
   position: absolute;
   top: 15px;
   width: 68px;
+  left: -13px;
 }
 
 @media (min-width: $tablet-width) {
-  .programs__wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+
+  .program__link-title {
+    padding-right: 23px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
   }
 
-  .programs__list-item {
-    padding: 77px 60px 62px 52px;
+  .program__list-item {
+    padding: 76px 60px 55px 52px;
     margin-top: 0;
     margin-bottom: 31px;
   }
 
   .program__picture {
     position: absolute;
-    top: 15px;
-    right: 0;
+    right: 62px;
+    top: 94px;
     width: 202px;
     height: 202px;
     margin-left: auto;
   }
 
-  .program-icon--slim {
+  .program__icon--slim {
     left: 30px;
     bottom: 16px;
     width: 70%;
     height: 100%;
   }
 
-  .program-item__title {
+  .program__item__title {
     font-size: 36px;
     line-height: 37px;
     margin-top: 0;
     margin-bottom: 8px;
   }
 
-  .program-item__title,
-  .program-item__intro,
-  .program-item__link {
+  .program__item__intro {
+    font-family: $fontLato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    padding-bottom: 32px;
+    padding-right: 24px;
+  }
+
+  .program__item__intro--pro {
+    padding-bottom: 57px;
+  }
+
+  .program__item__title,
+  .program__item__intro,
+  .program__item__link {
     width: calc(100% - 223px);
   }
 
 
-  .program-icon--pro {
+  .program__icon--pro {
     left: -35px;
     bottom: 1px;
     width: 133%;
     height: 100%;
   }
 
-  .program-icon--vector {
+  .program__icon--vector {
     width: 140px;
     height: 194px;
   }
 
   .program__picture--slim {
-    width: 100%;
-    height: 100%;
+    width: 140px;
+    height: 194px;
+    left: 30px;
+    top: -10px;
   }
 
   .program__picture--pro {
-    width: 100%;
-    height: 100%;
-    top: 5px;
+    width: 279px;
+    height: 112px;
+    top: 40px;
+    left: -30px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .programs__list {
+  .program__list {
     display: flex;
     gap: 80px;
   }
 
-  .program__picture--pro {
-    top: 5px;
+  .program__list-item {
+    width: 46.7%;
+    padding: 77px 40px 58px 50px;
   }
 
-  .programs__wrapper {
-    padding-left: 110px;
-    padding-right: 110px;
+  .program__picture--slim {
+    width: 70px;
+    height: 97px;
+    left: 14px;
+    top: -4px;
+  }
+
+  .program__picture--pro {
+    top: 19px;
+    height: 56px;
+    left: -85px;
+  }
+
+  .program__wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .program__picture {
     display: flex;
     position: relative;
-    top: 0;
     width: 100px;
     height: 100px;
-    margin-left: 0;
-    margin-top: 0;
+    margin-top: -183px;
   }
 
-  .program-item__title {
+  .program__item__title {
     display: flex;
     width: calc(100% - 162px);
     margin-bottom: 0;
   }
 
-  .program-item__intro {
+  .program__item__intro {
     width: 100%;
-    padding-bottom: 32px;
-    margin-top: 40px;
+    padding-bottom: 8px;
+    margin-top: 71px;
   }
 }
